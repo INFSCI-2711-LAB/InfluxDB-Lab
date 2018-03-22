@@ -23,6 +23,6 @@ def start_timer():
 
 client = InfluxDBClient('localhost', 8086, 'root', 'root', 'realtime')
 client.create_database('realtime')
-client.query('CREATE RETENTION POLICY "one_hour" ON "realtime" DURATION 1h REPLICATION 1')
+client.query('CREATE RETENTION POLICY "one_hour" ON "realtime" DURATION 1h REPLICATION 1 DEFAULT')
 client.query('CREATE CONTINUOUS QUERY "cq_one_min" ON "realtime" BEGIN SELECT mean(data_value) INTO realtime.autogen.realtime_mean FROM realtime.one_hour.realtime GROUP BY time(1m) END')
 start_timer()
