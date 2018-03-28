@@ -2,7 +2,7 @@
 
 current_dir=$(pwd)/$(dirname $0)
 
-files=`ls $current_dir/data/*.txt`
+files=`ls $current_dir/../data/*.txt`
 for filename in $files
 do
 	datetime="`date +%Y/%m/%d\ %H:%M:%S`"
