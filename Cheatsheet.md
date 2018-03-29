@@ -1,8 +1,9 @@
+
 # Cheatsheet for InfluxDB Lab
 
-This cheatsheet is for your reference, and you can **copy&paste** the commands to save time. However please follow the `Tutorial` and make sure **you know what you are doing** before executing anything.
+This cheatsheet is for your reference. You can **copy & paste** the commands to save time. However, please follow the `Tutorial` and make sure **you know what you are doing** before executing anything.
 
-> TOC
+> Table of Contents
 
 * [InfluxDB installation](#influxdb-installation)
 	* [On Mac](#on-mac)
@@ -16,8 +17,9 @@ This cheatsheet is for your reference, and you can **copy&paste** the commands t
 	* [(Optional) Continuous Query](#optional-continuous-query)
 * [Grafana](#grafana)
 	* [Installation](#installation)
-	* [Import panel](#import-panel)
+	* [Import panel](#import-dashboard)
 	* [Realtime data](#realtime-data)
+
 
 ## InfluxDB installation
 
@@ -36,9 +38,9 @@ influxd
 
 > Only `x64` arch is supported. Most modern computers should have **Windows 64bit** version installed.
 
-Download and unzip this: <https://dl.influxdata.com/influxdb/releases/influxdb-1.5.0_windows_amd64.zip>
+Download and unzip: <https://dl.influxdata.com/influxdb/releases/influxdb-1.5.0_windows_amd64.zip>
 
-Then follow the screenshots on the `Tutorial`. You **don't need to** change configuration file for this lab.
+Then follow the screenshots on the `Tutorial`. You *don't* need to change configuration file for this lab.
 
 ### On Linux(*NIX)
 
@@ -53,14 +55,17 @@ sudo ./influxd -config influxdb.conf
 
 ## InfluxDB client
 
-Start InfluxDB client by typing: `influx -precision rfc3339`. On Windows, just double click `influx.exe`.
+### Start InfluxDB Command Line Interface
+
+On Mac/*NIX:  running  `influx -precision rfc3339` in terminal.
+On Windows: double click `influx.exe`.
 
 ### Basic operations
 
 ```sql
-CREATE DATABASE Test
+CREATE DATABASE test
 SHOW DATABASES
-USE Test
+USE test
 ```
 
 ### Data insertion
@@ -78,13 +83,13 @@ SELECT * FROM server
 
 #### Import air quality data
 
-Download and unzip this: <https://github.com/INFSCI-2711-LAB/InfluxDB-Lab/archive/master.zip>
+Download and unzip: <https://github.com/INFSCI-2711-LAB/InfluxDB-Lab/archive/master.zip>
 
-- For Windows
+- On Windows
   - Copy `influx.exe` into the `script` folder
   - Execute `import_windows.bat`
 
-- For Mac/*NIX:
+- On Mac/*NIX
   - Open terminal and switch to the directory.
   - Execute: `sh scripts/import_mac_linux.sh`
 
@@ -130,7 +135,7 @@ SHOW CONTINUOUS QUERIES
 
 ### Installation
 
-#### Mac
+On Mac
 
 ```shell
 brew update
@@ -138,13 +143,13 @@ brew install Grafana
 brew services start Grafana
 ```
 
-#### Windows
+On Windows
 
 Download and unzip: <https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-5.0.4.windows-x64.zip>
 
 Then follow the screenshots on the `Tutorial`.
 
-### Import panel
+### Import dashboard
 
 See `Tutorial`.
 
