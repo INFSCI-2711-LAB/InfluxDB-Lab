@@ -58,6 +58,7 @@ sudo ./influxd -config influxdb.conf
 ### Start InfluxDB Command Line Interface
 
 On Mac/*NIX:  running  `influx -precision rfc3339` in terminal.
+
 On Windows: double click `influx.exe`.
 
 ### Basic operations
