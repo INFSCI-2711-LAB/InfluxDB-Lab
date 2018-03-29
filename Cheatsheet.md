@@ -132,6 +132,7 @@ CREATE CONTINUOUS QUERY "cq_one_min" ON "realtime" BEGIN SELECT mean(data_value)
 SHOW CONTINUOUS QUERIES
 ```
 
+
 ## Grafana
 
 ### Installation
