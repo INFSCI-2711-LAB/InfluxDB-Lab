@@ -17,7 +17,7 @@ This repo contains all the contents for the INFSCI 2711 Lab on InfluxDB.
 	- `brew install Grafana`
 
  - **Windows**: download the following files
-	 - https://dl.influxdata.com/influxdb/releases/influxdb-1.5.0\_windows\_amd64.zip
+	 - https://dl.influxdata.com/influxdb/releases/influxdb-1.5.0_windows_amd64.zip
 	 - https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-5.0.4.windows-x64.zip
 
 ### Cheatsheet
